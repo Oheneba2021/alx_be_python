@@ -13,7 +13,7 @@ def main():
         choice = str(choice).strip()
         if choice == '1':
             # Prompt for and add an item
-            add_item = input("Enter the name of item to add:").strip()
+            add_item = input("Enter the item to add:").strip()
             if not add_item.strip():
                 print("Sorry! Space cannot be empty")
             else:    
