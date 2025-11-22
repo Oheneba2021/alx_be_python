@@ -1,5 +1,5 @@
-import datetime
-current_datetime = datetime.datetime.now()
+from datetime import datetime
+current_datetime = datetime.now()
 print(f'current date and time: {current_datetime}')
 days_ahead = int(input("Enter the number of days to add to the current date:"))
 def future_date(days_ahead):
