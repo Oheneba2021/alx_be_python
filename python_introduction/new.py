@@ -134,18 +134,171 @@
 #         print("*", end=" ")
 #     print()
 
-rows = 5
-i = 1
+# rows = 5
+# i = 1
 
-while i <= rows:
-    space = 1
-    while space <= rows - i:
-        print(" ", end="")
-        space += 1
-    star = 1
-    while star <= (2 * i -1):
-        print("*", end="")
-        star += 1
-    print()
-    i += 1
-        
+# while i <= rows:
+#     space = 1
+#     while space <= rows - i:
+#         print(" ", end="")
+#         space += 1
+#     star = 1
+#     while star <= (2 * i -1):
+#         print("*", end="")
+#         star += 1
+#     print()
+#     i += 1
+
+# add = lambda x, y: (2*x) + y/
+# result = add(5, 3)
+# print(result)        
+
+
+# def calculate_area(length, width):
+#     '''Calculate the area of a rectangle.'''
+#     area = length * width
+#     return area
+
+# result = calculate_area(5, 3)
+# print("Area of rectangle:", result)
+
+
+# def user_info(name, age=None):
+#     """Prints user information."""
+#     print(f"Name: {name}")
+#     if age:
+#         print(f"Age: {age}")
+# user_info("Alice", 30)
+
+
+# Function definition with default value
+# def greet(name="World"):
+#     """Prints a greeting message,"""
+#     print(f"Hello, {name}!")
+# greet()
+# greet("Alice")
+
+# def square(number):
+#     """Returns the square of a number."""
+#     return number * number
+# squared_value = square(4)
+# print("Squared value:", squared_value)
+
+# count = 0 #global variable
+# def increment():
+#     count += 1 #this refers to the local count within the function
+#     increment()
+# print("Count value:", count)
+
+# count = 0  # global variable
+# def increment_global():
+#     global count
+#     count += 9
+# increment_global()
+# print("Count value:", count)
+
+# def outer_function():
+#     x = 10 # enclosing variable
+#     def inner_function():
+#         nonlocal x #using nonlocal to modify enclosing variable
+#         x += 5 # modify enclosing variable
+#     inner_function()
+#     print("Modified value of x from inner function:", x)
+# outer_function()
+
+# def greet_user(name):
+#     """Greets the user by name."""
+#     print("Greetings,", name,  "!" )
+# greet_user("Bob")
+
+# def area_of_rectangle(length, width):
+#     """Calculates the area of a rectangle"""
+#     return length * width
+# print("Area of rectangle:", area_of_rectangle(4, 6))
+
+# def check_even_odd(number):
+#     """Checks if a number is even or odd."""
+#     if number % 2 == 0:
+#         return "Even"
+#     else:
+#         return "Odd"
+# print("5 is", check_even_odd(5))
+
+
+#Data Structure: Tuples, sets and Dictionaries
+# # Tuples - immutable ordered containers
+# a = (3,5,6,'asdf')
+# print(a)
+# print(type(a))
+
+# print(a[0])  # Accessing elements
+# print(a[::2]) # Slicing
+# #a[1] = 10  # This will raise an error since tuples are immutable
+
+# b = list(a)  # Converting tuple to list
+# print(b)
+# b[1] = 10  # Modifying the list
+# print(b)
+# a = tuple(b)  # Converting back to tuple
+# print(a)
+
+# b = set(a)  # Converting tuple to set
+# print(b)
+
+# # Sets - unordered collections of unique elements
+# s = {3,4,5,6,7,7,7,7,7,7,7,7,7}
+# print(s)
+# print(type(s))
+
+# b = set()
+# print(b)
+
+# a = {3,4,5}
+# b = {4,5,6,7,8,9,6,6,5,4}
+# print(b)
+# c = a.intersection(b)
+# print(c)
+# d = a.union(b)
+# print(d)
+# e = 8 
+# print(e in b)
+# print(e in a)
+# f = b.difference(a)
+# print(f)
+
+
+# x = {3,4,5,6}
+# y = {5,4,3,6}
+# print(x == y)  # True, since sets are unordered and contain the same elements
+# print(x is y)  # False, since they are different objects in memory
+
+# c = list(y)
+# print(c)
+
+# c = [3,4,5,6,6,7,7,8,8]
+# print(c)
+# d = set(c)
+# print(d)
+# e = list(d)
+# print(e)
+
+# # Dictionaries - key-value pairs
+# ydict = {'k1': 'v1', 'k2': 'v2', 'k3': 'v3'}
+# print(ydict)
+# print(type(ydict))  
+# print(ydict['k1'])  # Accessing values by key
+# ydict['k1']=True  # Modifying values
+# print(ydict)
+# ydict['k4'] = 'v4'  # Adding new key-value pairs
+# print(ydict)
+# del ydict['k2']  # Deleting key-value pairs
+# print(ydict)
+# print(ydict.keys())  # Getting all keys
+# print(ydict.values())  # Getting all values
+# print(ydict.items())  # Getting all key-value pairs
+
+# xdict = {1:1, 2:3, 3:3}
+# print(xdict)
+# ydict.
+
+# Modules and Packages
