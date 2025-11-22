@@ -16,7 +16,7 @@ def main():
 
     # check if user entered correct unit
     if user_temp is None:
-        print("Invalid temperature value entered.")
+        print("Invalid temperature. Please enter a numeric value.")
         return
     else:
         temp_unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
