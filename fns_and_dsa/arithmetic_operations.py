@@ -1,5 +1,4 @@
 def perform_operation(num1,num2,operation):
-    num1 = 
     '''Performs basic arithmetic operations'''
     if operation == "add":
         return num1 + num2
@@ -17,7 +16,7 @@ def perform_operation(num1,num2,operation):
 
     
     def perform_operation(num1, num2, operation):
-    '''Performs basic arithmetic operations'''
+        '''Performs basic arithmetic operations'''
 
     # Convert input numbers to float
     try:
