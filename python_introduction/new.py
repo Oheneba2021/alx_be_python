@@ -302,3 +302,281 @@
 # ydict.
 
 # Modules and Packages
+# classes in python
+
+# class Student:
+#     def __init__(self, first_name, last_name, age):
+#         self.first_name = first_name
+#         self.last_name = last_name
+#         self.age = age
+#         self.current_class = "10th Grade"
+        
+    
+
+#     def approved(self):
+#         print(f"{self.first_name} {self.last_name} has been approved and admitted to {self.current_class} ")
+        
+#     def withdrawn(self):
+#         print(f"{self.first_name} {self.last_name} has been withdrawn from {self.current_class} ")
+        
+# student1 = Student("Godwin", "Boakye", 12)
+
+# is_approved = True
+# def process_student(student, approved):
+#     if approved:
+#         student.approved()
+#     else:
+#         student.withdrawn()
+# process_student(student1, is_approved)
+
+# class FileHandler:
+#     def __init__(self, filename):
+#         self.filename = filename
+#         self.file = open(filename, 'r')
+        
+#     def read_data(self):
+#         return self.file.read()
+    
+#     def __del__(self):
+#         self.file.close()
+#         # close the file when the object is destroyed 
+    
+# #create an instance or object of FileHandler
+# file_object = FileHandler ("testfile.txt")
+# print(file_object.read_data())
+
+# # object is no longer needed, it will be garbage collected, and __del__ method will be called automatically to close the file 
+
+# # __str__ and __repr__ methods
+# class Point:
+#     def __init__(self, x = str, y =str):
+#         self.x = x
+#         self.y = y
+        
+#     def __str__(self):
+#         return (f"Point({self.x}, {self.y})")
+    
+#     def __repr__(self):
+#         return (f"Point(x={self.x}, y={self.y})")
+# point1 = Point('3', '4')
+# print(point1)  # Calls __str__ method
+# print(repr(point1))  # Calls __repr__ method
+
+# # Inheritance
+# class Car:
+#     def __init__(self, make, model, year):
+#         self.make = make
+#         self.model = model
+#         self.year = year
+    
+#     def car_origin(self, origin):
+#         super().__init__()
+#         self.origin = origin
+#         return f"{self.make} {self.model} is manufactured in {self.origin}."
+
+# Car1 = Car("Toyota", "Tacoma", 2020)
+# print(Car1.car_origin("USA"))
+
+# # Composition as an alternative to inheritance
+# class Engine(Car):
+#     def __init__(self, make, model, year, horsepower):
+#         super().__init__(make, model, year)
+#         self.horsepower = horsepower
+    
+#     def start(self):
+#         return f"{self.make} Engine started."
+
+# start_engine = Engine.start(Car1)
+# print(start_engine)
+
+# class Animal:
+#     def __init__(self, name, species):
+#         self.name = name
+#         self.species = species
+    
+#     def make_sound(self, sound):
+#         return f"{self.name} the {self.species} says {sound}"
+
+# class Dog(Animal):
+#     def make_sound(self,):
+#         return "Woof!"
+    
+# dog1 = Dog("Buddy", "Dalmatian")
+# print(dog1.make_sound())
+
+# # multiple inheritance
+# class Flyer:
+#     def fly(self):
+#         return "Flying high!"   
+
+# class swimmer:
+#     def swim(self):
+#         return "Swimming fast!"
+
+# class Duck(Flyer, swimmer):
+#     pass
+
+# duck1 = Duck()
+# print(duck1.fly())  
+# print(duck1.swim()) 
+
+# # multilevel inheritance
+# class Vehicle:
+#     def move(self):
+#         print("Moving...")
+
+# class NewCar(Vehicle):
+#     pass
+
+# class ElectricCar(NewCar):
+#     def charge(self):
+#         print("Charging...")
+        
+# tesla = ElectricCar()
+# tesla.move() #Moving...
+# tesla.charge() #Charging...
+
+# # Method Resolution Order (MRO)
+# class A:
+#     def greet(self):
+#         return " Hello from class A"
+
+# class B(A):
+#     def greet(self):
+#         return "Hello from  class B"
+    
+# class C(A):
+#     def greet(self):
+#         return "Hello from class C"
+    
+# class D(B, C):
+#     pass
+
+# # Creating an instance of class D
+# d_instance = D()
+
+# print(d_instance.greet())  # Output: Hello from class B
+
+# # polymorphism
+
+# class Animal:
+#     def make_sound(self):
+#         print("Some generic animal sound")
+
+# class Cat(Animal):
+#     def make_sound(self):
+#         print("meow")
+
+# class Cow(Animal):
+#     def make_sound(self):
+#         print("moo")
+
+# class Dog(Animal):
+#     def make_sound(self):
+#         print("woof")
+
+# animals = [Cat(), Cow(), Dog()]
+
+# for each_animal in animals:
+#     each_animal.make_sound() 
+
+
+# # polymorphic behavior with duck typing 
+# class Duck:
+#     def quack(self):
+#         return "Duck quacks"
+# class Person: 
+#     def quack(self):
+#         return "Person imitates a duck"
+    
+# def make_sound(obj):
+#     return obj.quack()
+
+# duck_object = Duck()
+# person_object = Person()
+
+# print (make_sound(duck_object))  # Output: Duck quacks
+# print (make_sound(person_object))  # Output: Person imitates a duck
+
+# # practice exercise 
+# # single inheritance instruction 
+
+# class Shape:
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width  
+    
+#     def calculate_area(self):
+#         pass
+
+# class Rectangle(Shape):
+#     def __init__(self, length, width):
+#         super().__init__(length, width)
+        
+#     def calculate_area(self):         
+#         return self.length * self.width
+         
+# new_rectangle = Rectangle(5, 3)
+# print ("Area of rectangle:", new_rectangle.calculate_area())
+
+# @classmethod
+
+class Person:
+    count = 0 #Class variable to count instances
+    
+    def __init__(self, name):
+        self.name = name
+        Person.count += 1 # Increment count on instannce creation
+    
+    @classmethod
+    def display_count(cls):
+        print(f"Total persons created: {cls.count}")
+    
+    
+# Usage
+person1 = Person("Alice")
+person2 = Person("Bob")
+person3 = Person("Dessy")
+person4 = Person("Godwin")
+person5 = Person("Esi")
+person6 = Person("Kofi")
+person7 = Person("Ama")
+
+
+Person.display_count()
+
+
+# @static Methods
+class MathUtils:
+    @staticmethod
+    def add(a,b):
+        return a + b
+    
+    @staticmethod
+    def multiply(a,b):
+        return a * b
+
+# Usage
+print("Addition:", MathUtils.add(5, 3))
+print("Multiplication:", MathUtils.multiply(5, 3))
+
+
+class A:
+    def rk(self):
+        print("In class A")
+
+class B(A):
+    def rk(self):
+        print("In class B")
+        
+class C(A):
+    def rk(self):
+        print("In Class C")
+
+class D(B, C):
+    pass        
+
+r = D()
+r.rk()  # Output: In class B
+
+
